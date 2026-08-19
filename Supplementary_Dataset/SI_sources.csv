@@ -1,0 +1,34 @@
+﻿source_id,data_origin,si_subset,reference,n_records,n_mixes,role,raw_source_file
+SRC01,Literature,lit55,Ryu et al. 2024,55,5,Model training / CV (reference 55-point subset),2025_1127_Collected Data maturity.xlsx
+SRC02,Literature,lit119,Ryu et al. 2024,119,10,Model training / CV,2025_1127_Collected Data maturity.xlsx
+SRC03,Literature,lit503,"Choi et al., 2005",8,8,Model training / CV (large pool),2025_1127_Collected Data maturity.xlsx
+SRC04,Literature,lit503,"Choi et al., 2016",30,6,Model training / CV (large pool),2025_1127_Collected Data maturity.xlsx
+SRC05,Literature,lit503,"Han et al., 1998",16,6,Model training / CV (large pool),2025_1127_Collected Data maturity.xlsx
+SRC06,Literature,lit503,"Han et al., 1999",1,1,Model training / CV (large pool),2025_1127_Collected Data maturity.xlsx
+SRC07,Literature,lit503,"Han et al., 2000",19,4,Model training / CV (large pool),2025_1127_Collected Data maturity.xlsx
+SRC08,Literature,lit503,"Han, 2007",14,13,Model training / CV (large pool),2025_1127_Collected Data maturity.xlsx
+SRC09,Literature,lit503,KCI (2004),8,8,Model training / CV (large pool),2025_1127_Collected Data maturity.xlsx
+SRC10,Literature,lit503,"Kang et al., 2008",15,5,Model training / CV (large pool),2025_1127_Collected Data maturity.xlsx
+SRC11,Literature,lit503,"Khil et al., 1998",18,6,Model training / CV (large pool),2025_1127_Collected Data maturity.xlsx
+SRC12,Literature,lit503,Kim et al. (2019),4,1,Model training / CV (large pool),2025_1127_Collected Data maturity.xlsx
+SRC13,Literature,lit503,"Kim et al., 1995",30,8,Model training / CV (large pool),2025_1127_Collected Data maturity.xlsx
+SRC14,Literature,lit503,"Kim et al., 1996",15,3,Model training / CV (large pool),2025_1127_Collected Data maturity.xlsx
+SRC15,Literature,lit503,"Kim et al., 1998",90,33,Model training / CV (large pool),2025_1127_Collected Data maturity.xlsx
+SRC16,Literature,lit503,"Kim et al., 1999",18,6,Model training / CV (large pool),2025_1127_Collected Data maturity.xlsx
+SRC17,Literature,lit503,"Kim et al., 2018",17,5,Model training / CV (large pool),2025_1127_Collected Data maturity.xlsx
+SRC18,Literature,lit503,"Kim, 2020",30,3,Model training / CV (large pool),2025_1127_Collected Data maturity.xlsx
+SRC19,Literature,lit503,"Kwon et al., 2008",12,4,Model training / CV (large pool),2025_1127_Collected Data maturity.xlsx
+SRC20,Literature,lit503,"Kwon, 2004",32,4,Model training / CV (large pool),2025_1127_Collected Data maturity.xlsx
+SRC21,Literature,lit503,"Lee et al., 2004",20,4,Model training / CV (large pool),2025_1127_Collected Data maturity.xlsx
+SRC22,Literature,lit503,"Lee et al., 2011",12,12,Model training / CV (large pool),2025_1127_Collected Data maturity.xlsx
+SRC23,Literature,lit503,"Lee et al., 2017",9,3,Model training / CV (large pool),2025_1127_Collected Data maturity.xlsx
+SRC24,Literature,lit503,"Lee et al., 2021",10,10,Model training / CV (large pool),2025_1127_Collected Data maturity.xlsx
+SRC25,Literature,lit503,"Lim et al., 2010",6,2,Model training / CV (large pool),2025_1127_Collected Data maturity.xlsx
+SRC26,Literature,lit503,Nam et al. (2016),9,3,Model training / CV (large pool),2025_1127_Collected Data maturity.xlsx
+SRC27,Literature,lit503,"Nam et al., 1997",15,3,Model training / CV (large pool),2025_1127_Collected Data maturity.xlsx
+SRC28,Literature,lit503,"Park et al., 2003",18,6,Model training / CV (large pool),2025_1127_Collected Data maturity.xlsx
+SRC29,Literature,lit503,"Park et al., 2011",15,15,Model training / CV (large pool),2025_1127_Collected Data maturity.xlsx
+SRC30,Literature,lit503,Seo et al. (2020),4,1,Model training / CV (large pool),2025_1127_Collected Data maturity.xlsx
+SRC31,Literature,lit503,"Yoo et al., 2017",8,2,Model training / CV (large pool),2025_1127_Collected Data maturity.xlsx
+SRC32,My experiment,slab,Park et al. 2026,22,2,Field validation (out-of-domain),"SLAB_Exp_1.xlsx; SLAB_Exp_2/ (A,C,IoT); 2025_slab_fmats-13-1762995.pdf"
+SRC33,My experiment,cube,Lee 2026 (cube),33,3,Field validation (ambient-core bridge),CUBE_TC-Mockup.xlsx; 2026_0611_cube_report_final_a.pdf; 2026_0611_압축강도_시험결과_rik.png

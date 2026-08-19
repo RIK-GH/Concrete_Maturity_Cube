@@ -1,0 +1,20 @@
+This repository is dual-licensed by content type:
+
+  * Analysis code (everything under Src/, and any script files elsewhere):
+      MIT License -- see LICENSE-MIT.txt
+
+  * Data, documentation, and figures (Supplementary_Dataset/, Data/,
+    README files, and figure files):
+      Creative Commons Attribution 4.0 International (CC BY 4.0)
+      -- see LICENSE-CC-BY-4.0.txt
+
+Attribution. If you use this dataset or code, please cite the accompanying
+article: "Member-size reversal of in-place concrete strength: FBG-monitored
+maturity for formwork removal" (under review, Case Studies in Construction
+Materials). A DOI-archived snapshot will be referenced in the final version.
+
+Provenance notice. The literature portion of the strength-maturity records
+was extracted from published primary studies identified in
+Supplementary_Dataset/SI_sources.csv; users who redistribute or reuse
+subsets of the data should preserve these source attributions. The cube and
+slab measurements are original data of the authors.

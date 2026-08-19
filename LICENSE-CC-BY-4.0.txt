@@ -1,0 +1,27 @@
+Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+Applies to: Supplementary_Dataset/, Data/, README files, and figure files.
+
+You are free to:
+  Share  -- copy and redistribute the material in any medium or format
+  Adapt  -- remix, transform, and build upon the material for any purpose,
+            even commercially.
+
+Under the following terms:
+  Attribution -- You must give appropriate credit (cite the accompanying
+  article and this repository), provide a link to the license, and indicate
+  if changes were made. You may do so in any reasonable manner, but not in
+  any way that suggests the licensor endorses you or your use.
+
+  No additional restrictions -- You may not apply legal terms or
+  technological measures that legally restrict others from doing anything
+  the license permits.
+
+Notices:
+  The literature portion of the records is extracted from published primary
+  studies (see Supplementary_Dataset/SI_sources.csv); source attributions
+  must be preserved when redistributing subsets. The cube and slab
+  measurements are original data of the authors.
+
+This is a human-readable summary of (and not a substitute for) the license.
+Full legal code: https://creativecommons.org/licenses/by/4.0/legalcode

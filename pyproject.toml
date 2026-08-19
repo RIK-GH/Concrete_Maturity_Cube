@@ -1,0 +1,25 @@
+[project]
+name = "maturity-advancement"
+version = "0.1.0"
+description = "Physics-informed maturity-strength framework advancing Park et al. (2026)"
+requires-python = ">=3.11,<3.14"
+dependencies = [
+    "pandas>=2.2",
+    "numpy>=1.26",
+    "scipy>=1.11",
+    "scikit-learn>=1.4",
+    "xgboost>=2.0",
+    "openpyxl>=3.1",
+    "pyarrow>=15",
+    "matplotlib>=3.8",
+    "shap>=0.46",
+    "numba>=0.59",          # shap dependency: pin away from 2021-era builds
+]
+
+[tool.uv]
+package = false
+
+# Kept at the repository root, not in Src/, so that `uv run` works from anywhere in
+# the tree: both `uv run python Src/run_all.py` and `cd Src && uv run python run_all.py`
+# resolve this project. With the file inside Src/ the first form silently ran a bare
+# interpreter and failed on the first import.

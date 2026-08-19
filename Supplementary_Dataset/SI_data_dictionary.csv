@@ -1,0 +1,60 @@
+﻿file,column,unit,type,description
+S1,record_id,-,integer,Unique sequential row identifier for this table.
+S1,dataset,-,category,"Source subset: lit55 / lit119 (curated literature, Ryu et al. 2024), lit503 (large literature DB), slab (in-situ slab experiments), cube (400 mm cube experiment)."
+S1,mix_id,-,text,Unique concrete mixture identifier within the source.
+S1,mix_family,-,text,Mixture family grouping used for leakage-free (grouped) cross-validation.
+S1,ref,-,text,Original literature or experimental report the record was taken from.
+S1,temp_source,-,category,Temperature history used to compute maturity: ambient / standard (20 C bath) / core (embedded sensor) / air.
+S1,curing_type,-,category,Specimen curing condition where reported: SC (standard-cured) / AD (air-dry/ambient) / Cored / water / air / core_indoor / core_outdoor. Blank when not applicable (isothermal literature).
+S1,curing_C,deg C,float,Nominal (isothermal literature) or mean (experiments) curing temperature.
+S1,WC,-,float,Water-to-cement ratio (mass). For the cube mixes this is the effective W/C used in the analysis.
+S1,cement,kg/m3,float,Portland cement content. Blank for slab/cube (proprietary mix not disclosed).
+S1,fly_ash,kg/m3,float,Fly-ash content (0 for plain OPC mixes). Blank where mix design undisclosed.
+S1,SCM_other,kg/m3,float,Other supplementary cementitious material (slag / GGBFS or generic SCM). Blank where undisclosed.
+S1,binder,kg/m3,float,Total binder = cement + fly_ash + SCM_other. Blank where undisclosed.
+S1,Sa,%,float,Fine-aggregate ratio (sand / total aggregate) where reported.
+S1,RH,%,float,Relative humidity of the curing environment where reported.
+S1,age_day,day,float,Specimen age at test.
+S1,time_h,h,float,Specimen age at test in hours (= age_day x 24).
+S1,M_NS,deg C.h,float,"Nurse-Saul maturity, M = sum (T - T0) dt, datum T0 = -10 C (ASTM C1074)."
+S1,t_eq,h,float,"Arrhenius equivalent age at T_ref = 20 C (293.15 K), Ea = 38300 J/mol default; t_eq = sum exp[-Ea/R (1/T - 1/T_ref)] dt."
+S1,DD,deg C.day,float,"Degree-day maturity, DD = sum T dt / 24."
+S1,f_c,MPa,float,Measured compressive strength. TARGET variable for the strength-prediction models.
+S1,fck,MPa,float,Specified/design compressive strength f'c where defined (experiments only).
+S1,peakT,deg C,float,Peak core temperature reached (cube/slab core records only).
+S1,peak_day,day,float,Age at which the peak core temperature occurred.
+S1,maturity_provisional,-,boolean,TRUE where the maturity index was reverse-engineered from a reported maturity/degree-day column rather than integrated from a full temperature history.
+S2,dataset,-,category,Source subset the mixture belongs to.
+S2,mix_id,-,text,Concrete mixture identifier (matches S1.mix_id).
+S2,ref,-,text,Source reference of the mixture (matches S1.ref; see SI_sources.csv).
+S2,Su_MPa,MPa,float,"Fitted ultimate strength, ASTM C1074 hyperbolic S = Su k M / (1 + k M) on equivalent age."
+S2,k_perMPaMaturity,1/(deg C.h),float,Fitted hyperbolic rate constant k.
+S2,R2,-,float,Coefficient of determination of the per-mix hyperbolic fit.
+S2,RMSE_MPa,MPa,float,Root-mean-square error of the per-mix hyperbolic fit.
+S2,n_points,-,integer,Number of strength-age points used in the fit.
+S3,mix_id,-,text,Concrete mixture identifier (matches S1.mix_id).
+S3,n_temperatures,-,integer,"Number of distinct curing temperatures available for the ASTM C1074 Arrhenius calibration (0 = insufficient, default Ea used)."
+S3,Ea_J_per_mol,J/mol,float,Per-mix apparent activation energy from the Arrhenius plot of rate constant vs 1/T. Blank when not calibratable.
+S3,R2_arrhenius,-,float,R2 of the Arrhenius (ln k vs 1/T) regression. Blank when not calibratable.
+S4,member,-,text,"Member whose core history is integrated: slab_Exp1 / slab_Exp2 (field slabs), cube (400 mm cube, mean of the three indoor members' thermocouples), cube_out (the field-exposed fourth member, its own thermocouple)."
+S4,WC,-,float,Water-to-cement ratio (effective) of the member.
+S4,age_day,day,float,Age at which maturities are compared.
+S4,M_NS_core,deg C.h,float,Nurse-Saul maturity from the embedded core temperature history.
+S4,t_eq_core,h,float,Arrhenius equivalent age from the core temperature history.
+S4,DD_core,deg C.day,float,Degree-day maturity from the core temperature history.
+S4,M_NS_ambient,deg C.h,float,Nurse-Saul maturity from the ambient temperature history.
+S4,t_eq_ambient,h,float,Arrhenius equivalent age from the ambient temperature history.
+S4,DD_ambient,deg C.day,float,Degree-day maturity from the ambient temperature history.
+S4,ratio_teq_core_amb,-,float,Ratio of core to ambient equivalent age (condition-dependent ambient->core transfer factor).
+S4,Tearly_core_C,deg C,float,Mean core temperature over the first 72 h (T_early).
+S4,Tearly_amb_C,deg C,float,Mean ambient temperature over the first 72 h (T_early).
+S4,t_eq_AD,h,float,Equivalent age of the air-dry (AD) control specimen where logged.
+S4,t_eq_SC,h,float,Equivalent age of the standard-cured (SC) control specimen where logged.
+sources,source_id,-,text,Sequential provenance identifier (SRCnn).
+sources,data_origin,-,category,Literature (compiled published data) or My experiment (author's slab/cube tests).
+sources,si_subset,-,category,Which S1 subset the source feeds (lit55/lit119/lit503/slab/cube).
+sources,reference,-,text,Normalised source reference (matches S1.ref).
+sources,n_records,-,integer,Number of S1 strength records contributed by this source.
+sources,n_mixes,-,integer,Number of distinct mixtures contributed by this source.
+sources,role,-,text,Role of the source in the analysis (model training/CV vs field validation).
+sources,raw_source_file,-,text,Original raw file(s) in the parent project directory the data were parsed from.

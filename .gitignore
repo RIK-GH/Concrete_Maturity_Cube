@@ -1,0 +1,27 @@
+# environments & caches
+.venv/
+Src/.venv/
+Src/__pycache__/
+**/__pycache__/
+# LaTeX build artifacts
+Doc/*.aux
+Doc/*.log
+Doc/*.out
+Doc/*.synctex*
+# large intermediate outputs (regenerable via Src/run_all.py)
+Data/master.parquet
+Data/master_phys.parquet
+# request-only data (ETRI rule): released to requesters, never in the public deposit
+Restricted/
+# internal working documents - never publish
+#   reply drafts to reviewers / co-authors
+Doc/response_to_reviewers*.md
+Doc/reply_to_coauthors*.md
+#   internal review and verification records
+Doc/review_note*.md
+Doc/verification_notes*.md
+# never in the public deposit: manuscript sources, regenerable outputs,
+# and journal-submission packages (cover letter, editing certificate)
+Doc/
+Data/
+2026_08*/
